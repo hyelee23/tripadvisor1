@@ -86,3 +86,5 @@ $('.btn-register').click(function() {
 	Cookies.set('MYTRIPS', myTrips);
 	alert('여행지가 등록되었습니다.');
 });
+
+/*안태영 10:26*/
