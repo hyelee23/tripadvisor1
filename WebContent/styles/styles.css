@@ -598,7 +598,7 @@ button:hover {
 	background-color: #A4AAB2;
 }
 
-.form-box.login-box input[type="text"], 122 .form-box.login-box input[type="password"],
+.form-box.login-box input[type="text"], .form-box.login-box input[type="password"],
 	.form-box.login-box button {
 	width: 470px;
 	height: 55px;
