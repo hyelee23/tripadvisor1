@@ -438,14 +438,14 @@ button:hover {
 }
 
 /* 마이트립 */
-.mytrip-container #map{
+.mytrip-container #map {
 	display: inline-block;
 	width: 580px;
 	height: 500px;
 	margin-right: 10px;
 }
 
-.mytrip-container #mytrip-list{
+.mytrip-container #mytrip-list {
 	display: inline-block;
 	width: 480px;
 	height: 500px;
@@ -454,12 +454,12 @@ button:hover {
 	margin: 0;
 	padding: 0;
 }
-	
-#mytrip-item-template{
+
+#mytrip-item-template {
 	display: none;
 }
 
-.mytrip-container li{
+.mytrip-container li {
 	position: relative;
 	margin: 0 3px 10px 3px;
 	padding: 15px 20px;
@@ -467,37 +467,37 @@ button:hover {
 	width: 470px;
 	height: 60px;
 	box-sizing: border-box;
-	box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 7px -3px rgba(0, 0, 0, 0.2);
 	background-color: #fff;
 }
 
-.mytrip-container span{
+.mytrip-container span {
 	display: inline-block;
 	vertical-align: middle;
 	height: 30px;
 	line-height: 30px;
 }
 
-.mytrip-container .item-handle{
+.mytrip-container .item-handle {
 	width: 22px;
 	height: 18px;
 	background-image: url('../images/btn_change.png');
 }
 
-.mytrip-container .item-icon{
+.mytrip-container .item-icon {
 	width: 13px;
 	height: 16px;
 	margin-left: 7px;
 	background-image: url('../images/icon_list_location.png');
 }
 
-.mytrip-container .item-name{
+.mytrip-container .item-name {
 	font-size: 15px;
 	font-weight: bold;
 	color: #444;
 }
 
-.mytrip-container .item-line{
+.mytrip-container .item-line {
 	width: 2px;
 	height: 16px;
 	margin-left: 5px;
@@ -505,12 +505,12 @@ button:hover {
 	background-image: url('../images/line_location_gray.png');
 }
 
-.mytrip-container .item-city-name{
+.mytrip-container .item-city-name {
 	font-size: 13px;
 	color: #909090;
 }
 
-.mytrip-container .item-remove{
+.mytrip-container .item-remove {
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -591,4 +591,23 @@ button:hover {
 	font-size: 13px;
 	color: red;
 	margin-top: -5px;
+}
+
+/* 로그인 */
+#btn-home {
+	background-color: #A4AAB2;
+}
+
+.form-box.login-box input[type="text"], 122 .form-box.login-box input[type="password"],
+	.form-box.login-box button {
+	width: 470px;
+	height: 55px;
+}
+
+.login-box {
+	width: 610px;
+	height: 490px;
+	background-color: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+	margin: 150px auto 150px;
 }
