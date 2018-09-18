@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>My Trip Advisor - 상세보기</title>
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+<link rel="stylesheet" href="styles/styles.css" />
+<script src="libs/jquery-3.3.1.min.js"></script>
+<script src="libs/galleria/galleria-1.5.7.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=발급 받는 API KEY"></script>
+<script src="scripts/detail.js"></script>
 </head>
-<body>
-
-</body>
-</html>
+var map; $(function() { var id = parseId(window.location.search);
+getDetail(id); showMap(); }); … function showMap() { map = new
+google.maps.Map(document.getElementById('map'), { zoom : 12, center : {
+lat : 33.3617, lng : 126.5292 } }); }
