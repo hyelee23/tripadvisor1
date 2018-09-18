@@ -1,5 +1,6 @@
-var map;
+/*최종180918 16:12*/
 
+var map;
 
 $(function() {
 	var id = parseId(window.location.search);

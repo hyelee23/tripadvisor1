@@ -1,3 +1,5 @@
+/*최종180918 16:12*/
+
 $(function() {
    generateYears($('#sel-birth'));
    var birthSelect = $('#sel-birth').selectmenu();

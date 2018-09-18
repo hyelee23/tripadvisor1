@@ -1,3 +1,5 @@
+/*최종180918 16:12*/
+
 $(function(){
    $(window).scroll(function(){
       var top=$(window).scrollTop();
@@ -22,7 +24,6 @@ $(function(){
 	   }
    });
    dpTo.datepicker('setDate', 4);
-<<<<<<< HEAD
    $('#form-search').submit( function(e) {
 	   e.preventDefault();
 	   
@@ -61,6 +62,3 @@ function createListItem(data) {
 	});
 	return $tmpl;
 }
-=======
-});
->>>>>>> refs/remotes/origin/taeyoung
