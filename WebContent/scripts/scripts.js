@@ -24,8 +24,10 @@ $(function(){
    dpTo.datepicker('setDate', 4);
    $('#form-search').submit( function(e) {
 	   e.preventDefault();
+	   
 	   var from = $('#from').val();
 	   var to = $('#to').val();
+	   
 	   search(from,to);
    }); 
 });
