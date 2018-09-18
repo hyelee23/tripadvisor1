@@ -6,16 +6,6 @@ $(function() {
 	showMap();
 });
 
-function showMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		zoom : 12,
-		center : {
-			lat : 33.3617,
-			lng : 126.5292
-		}
-	});
-}
-
 function getDetail(id) {
 	var url = 'https://javascript-basic.appspot.com/locationDetail';
 
@@ -36,6 +26,16 @@ function getDetail(id) {
 		Galleria.run('#detail-images');
 
 		showMarker(r.position.x, r.position.y);
+	});
+}
+
+function showMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		zoom : 12,
+		center : {
+			lat : 33.3617,
+			lng : 126.5292
+		}
 	});
 }
 
