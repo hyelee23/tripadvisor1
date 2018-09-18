@@ -1,20 +1,12 @@
+
 var map;
+
 
 $(function() {
 	var id = parseId(window.location.search);
-	getDetil(id);
+	getDetail(id);
 	showMap();
 });
-
-function showMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		zoom : 12,
-		center : {
-			lat : 33.3617,
-			lng : 126.5292
-		}
-	});
-}
 
 function getDetail(id) {
 	var url = 'https://javascript-basic.appspot.com/locationDetail';
@@ -36,37 +28,6 @@ function getDetail(id) {
 		Galleria.run('#detail-images');
 
 		showMarker(r.position.x, r.position.y);
-	});
-}
-
-function showMarker(lat, lng) {
-	var pos = {
-		lat : lat,
-		lng : lng
-	};
-
-	new google.maps.Marker({
-		position : pos,
-		map : map
-	});
-	map.panTo(pos);
-}
-
-function parseId(str) {
-	var s = str.substring(1);
-	var args = s.split('&');
-
-	for (var i = 0; i < args.length; i++) {
-		var arg = args[i];
-		var tokens = arg.split('=');
-
-		if (token[0] === 'id') {
-			return tokens[1];
-		}
-	}
-	return null;
-}
-
 $('.btn-register').click(function() {
 	var myTrips = Cookies.getJSON('MYTRIPS');
 
@@ -86,5 +47,47 @@ $('.btn-register').click(function() {
 	Cookies.set('MYTRIPS', myTrips);
 	alert('여행지가 등록되었습니다.');
 });
+	});
+}
+
+function parseId(str) {
+	var s = str.substring(1);
+	var args = s.split('&');
+
+	for (var i = 0; i < args.length; i++) {
+		var arg = args[i];
+		var tokens = arg.split('=');
+
+		if (tokens[0] === 'id'){
+			return tokens[1];
+		}
+	}
+	return null;
+}
+
+function showMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		zoom : 12,
+		center : {
+			lat : 33.3617,
+			lng : 126.5292
+		}
+	});
+}
+
+function showMarker(lat, lng) {
+	var pos = {
+		lat : lat,
+		lng : lng
+	};
+
+	new google.maps.Marker({
+		position : pos,
+		map : map
+	});
+	map.panTo(pos);
+}
+
+
 
 /*안태영 10:26*/
