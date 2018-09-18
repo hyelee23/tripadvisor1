@@ -2,7 +2,7 @@ var map;
 
 $(function() {
 	var id = parseId(window.location.search);
-	
+
 	getDetil(id);
 	showMap();
 });
@@ -19,17 +19,17 @@ function getDetail(id) {
 
 		var $gallery = $('#detail-images');
 		var images = r.subImageList;
-		
+
 		for (var i = 0; i < images.length; i++) {
 			var $image = $('<img src="' + images[i] + '" />');
 			$gallery.append($image);
 		}
-		
+
 		Galleria.loadTheme('libs/galleria/themes/classic/galleria.classic.min.js');
 		Galleria.run('#detail-images');
 
 		showMarker(r.position.x, r.position.y);
-		
+
 		$('.btn-register').click(function() {
 			var myTrips = Cookies.getJSON('MYTRIPS');
 
@@ -82,7 +82,6 @@ function showMarker(lat, lng) {
 		lat : lat,
 		lng : lng
 	};
-
 	new google.maps.Marker({
 		position : pos,
 		map : map
