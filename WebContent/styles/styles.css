@@ -592,3 +592,20 @@ button:hover {
 	color: red;
 	margin-top: -5px;
 }
+/* 로그인 */
+#btn-home {
+	background-color: #A4AAB2;
+}
+.form-box.login-box input[type="text"], .form-box.login-box input[type="password"],
+	.form-box.login-box button {
+	width: 470px;
+	height: 55px;
+}
+
+.login-box {
+	width: 610px;
+	height: 490px;
+	background-color: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+	margin: 150px auto 150px;
+}
