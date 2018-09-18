@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>My Trip Advisor - 상세보기</title>
-<link rel="stylesheet" href="libs/jquery-ui/jquery-ui/jquery-ui.min.css" />
-<link rel="stylesheet" href="style/style.css" />
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+<link rel="stylesheet" href="styles/styles.css" />
 <script src="libs/js.cookie.js"></script>
 <script src="libs/jquery-3.3.1.min.js"></script>
 <script src="libs/galleria/galleria-1.5.7.min.js"></script>
-<script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_KVey-NjxyopBGHy4xeP64WGheemVC7Q"></script>
+<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoDi3ZIyRDZfPVdHc0HlF52iCQAkxZF3M"></script>
 <script src="scripts/detail.js"></script>
 </head>
 <body>
@@ -23,8 +22,26 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="body" class="detail">
+			<div class="detail-container">
+				<div class="detail-header">
+					<img src="images/icon_list_location.png" />
+					<div class="detail-header-name"></div>
+					| <span class="detail-header-city-name"></span>
+					<button class="btn-register">여행지 등록하기</button>
+				</div>
+				<div id="detail-images"></div>
+				<div class="detail-desc">
+					<div class="detail-title">장소 소개</div>
+					<div class="detail-desc-text"></div>
+				</div>
+				<div class="detail-map">
+					<div class="detail-title">지도</div>
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
-<!-- 안태영 10:26 -->
-<!-- 김용건 -->

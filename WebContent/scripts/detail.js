@@ -1,8 +1,9 @@
 var map;
 
+
 $(function() {
 	var id = parseId(window.location.search);
-	getDetil(id);
+	getDetail(id);
 	showMap();
 });
 
@@ -26,7 +27,41 @@ function getDetail(id) {
 		Galleria.run('#detail-images');
 
 		showMarker(r.position.x, r.position.y);
+$('.btn-register').click(function() {
+	var myTrips = Cookies.getJSON('MYTRIPS');
+
+	// 존재하지 않을 경우 빈 배열로 초기화
+	if (!myTrips) {
+		myTrips = [];
+	}
+
+	// 여행지를 myTrips에 추가
+	myTrips.push({
+		id : id,
+		name : r.name,
+		cityName : r.cityName,
+		x : r.position.x,
+		y : r.position.y
 	});
+	Cookies.set('MYTRIPS', myTrips);
+	alert('여행지가 등록되었습니다.');
+});
+	});
+}
+
+function parseId(str) {
+	var s = str.substring(1);
+	var args = s.split('&');
+
+	for (var i = 0; i < args.length; i++) {
+		var arg = args[i];
+		var tokens = arg.split('=');
+
+		if (tokens[0] === 'id'){
+			return tokens[1];
+		}
+	}
+	return null;
 }
 
 function showMap() {
@@ -51,38 +86,3 @@ function showMarker(lat, lng) {
 	});
 	map.panTo(pos);
 }
-
-function parseId(str) {
-	var s = str.substring(1);
-	var args = s.split('&');
-
-	for (var i = 0; i < args.length; i++) {
-		var arg = args[i];
-		var tokens = arg.split('=');
-
-		if (token[0] === 'id') {
-			return tokens[1];
-		}
-	}
-	return null;
-}
-
-$('.btn-register').click(function() {
-	var myTrips = Cookies.getJSON('MYTRIPS');
-
-	// 존재하지 않을 경우 빈 배열로 초기화
-	if (!myTrips) {
-		myTrips = [];
-	}
-
-	// 여행지를 myTrips에 추가
-	myTrips.push({
-		id : id,
-		name : r.name,
-		cityName : r.cityName,
-		x : r.position.x,
-		y : r.position.y
-	});
-	Cookies.set('MYTRIPS', myTrips);
-	alert('여행지가 등록되었습니다.');
-});
